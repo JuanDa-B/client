@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Determinar la URL base para las llamadas a la API
 const BASE_URL = process.env.NODE_ENV === 'production'
-  ? 'https://tu-backend-real.onrender.com/api'  // ¡Actualiza esta URL con la que te da Render!
+  ? process.env.REACT_APP_API_URL || 'https://libreria-app-backend.onrender.com/api'  // URL de producción desde variable de entorno
   : 'http://localhost:5000/api';                // URL local para desarrollo
 
 // Configuración base de axios
